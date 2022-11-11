@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.top {
+  width: 200px;
+}
+#colorName {
+  margin-bottom: 10px;
+  background-color: white;
+  font-size: 16px;
+  cursor: text;
+  width: 70%;
+}
+.copy {
+  width: 25%;
+  font-size: 16px;
+  padding: 1px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn {
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.root {
+  color: white;
+}
+
+.toast {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 5px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.toast_in {
+  animation: toast_message_in 0.5s ease-in;
+}
+
+.toast_out {
+  animation: toast_message_out 0.5s ease-out;
+}
+
+/* ease in animation  */
+@keyframes toast_message_in {
+  from {
+    transform: translateX(200px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+/* ease out animation  */
+
+@keyframes toast_message_out {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
